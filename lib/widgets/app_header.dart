@@ -5,48 +5,46 @@ class FinanceHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Material(
       color: Colors.white,
-      padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text(
-                "Saldo Atual",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.black54,
+      elevation: 4, // 👈 controla a sombra
+      shadowColor: Colors.black12,
+      child: Container(
+        color: Colors.white,
+        padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text(
+                  "Saldo Atual",
+                  style: TextStyle(fontSize: 14, color: Colors.black54),
                 ),
-              ),
-              SizedBox(height: 4),
-              Text(
-                "R\$ 5.000,00",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                SizedBox(height: 4),
+                Text(
+                  "R\$ 5.000,00",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
 
-          const Spacer(),
+            const Spacer(),
 
-          Row(
-            children: const [
-              _FilterChip(label: "Janeiro"),
-              SizedBox(width: 12),
-              _FilterChip(label: "2026"),
-            ],
-          )
-        ],
+            Row(
+              children: const [
+                _FilterChip(label: "Janeiro"),
+                SizedBox(width: 12),
+                _FilterChip(label: "2026"),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
 }
-
 
 class _FilterChip extends StatelessWidget {
   final String label;
@@ -63,12 +61,7 @@ class _FilterChip extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(
-            label,
-            style: const TextStyle(
-              fontWeight: FontWeight.w600,
-            ),
-          ),
+          Text(label, style: const TextStyle(fontWeight: FontWeight.w600)),
           const SizedBox(width: 12),
           const Icon(Icons.keyboard_arrow_down, size: 18),
         ],
