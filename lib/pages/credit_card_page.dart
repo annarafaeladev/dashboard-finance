@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FinancePage extends StatelessWidget {
-  const FinancePage({super.key});
+class CreditCardPage extends StatelessWidget {
+  const CreditCardPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        '💰 Entradas',
+        '💰 Cartao de credito',
         style: TextStyle(fontSize: 28),
       ),
     );
