@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/navigation/nav_items.dart';
 import 'package:flutter_application_1/widgets/app_bar_custom.dart';
+import 'package:flutter_application_1/widgets/app_header.dart';
 import 'package:flutter_application_1/widgets/app_navigation_bar.dart';
 
 void main() {
@@ -14,8 +15,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Finance',
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.indigo,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
+          elevation: 0,
+          iconTheme: IconThemeData(color: Colors.black),
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
       home: const MainLayout(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -33,8 +49,17 @@ class _MainLayoutState extends State<MainLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarCustom(title: appNavItems[selectedIndex].pageItem.appBarTitle),
-      body: appNavItems[selectedIndex].pageItem.page,
+      appBar: AppBarCustom(
+        title: appNavItems[selectedIndex].pageItem.appBarTitle,
+      ),
+      body: Column(
+        children: [
+          FinanceHeader(),
+
+          Expanded(child: appNavItems[selectedIndex].pageItem.page),
+        ],
+      ),
+
       bottomNavigationBar: AppNavigationBar(
         items: appNavItems,
         currentIndex: selectedIndex,
