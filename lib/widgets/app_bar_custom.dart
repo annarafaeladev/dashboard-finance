@@ -9,11 +9,11 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
-      surfaceTintColor: Colors.black, // remove o tom do Material 3
+      surfaceTintColor: Colors.white, // remove o tom do Material 3
       elevation: 0,
       title: Row(
         children: [
-          const Icon(Icons.account_balance_wallet),
+          Icon(Icons.account_balance_wallet, color: Color(0xFF10B981)),
           const SizedBox(width: 8),
           Text(title),
         ],
