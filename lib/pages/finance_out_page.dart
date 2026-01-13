@@ -17,7 +17,7 @@ class FinanceOutPage extends StatelessWidget {
             title: "Saídas",
             subtitle: "Gerencie suas despesas",
             buttonText: "Nova Despesa",
-            color: Color.fromARGB(255, 14, 160, 68),
+            color: Color(0xFF16A28C),
             onPressed: () {
               // abrir modal ou navegar
             },
@@ -30,8 +30,8 @@ class FinanceOutPage extends StatelessWidget {
             title: "Total de Saídas",
             value: "R\$ 0.000,00",
             icon: Icons.trending_up,
-            startColor: Color(0xFFEF4444),
-            endColor: Color(0xFFF87171),
+            startColor: Color(0xFFDD2B2B),
+            endColor: Color(0xFFE95C38),
           ),
 
           const SizedBox(height: 16),

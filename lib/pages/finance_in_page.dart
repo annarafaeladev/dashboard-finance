@@ -17,7 +17,7 @@ class FinanceInPage extends StatelessWidget {
             title: "Entradas",
             subtitle: "Gerencie suas fontes de renda",
             buttonText: "Nova Entrada",
-            color: Color.fromARGB(255, 14, 160, 68),
+            color: Color(0xFF16A28C),
             onPressed: () {
               // abrir modal ou navegar
             },
@@ -30,8 +30,8 @@ class FinanceInPage extends StatelessWidget {
             title: "Total de Entradas",
             value: "R\$ 0.000,00",
             icon: Icons.trending_up,
-            startColor: Color(0xFF22C55E),
-            endColor: Color(0xFF4ADE80),
+            startColor: Color(0xFF189E5D),
+            endColor: Color(0xFF2EC985),
           ),
 
           const SizedBox(height: 16),

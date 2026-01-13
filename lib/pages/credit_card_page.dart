@@ -17,7 +17,7 @@ class CreditCardPage extends StatelessWidget {
             title: "Cartão de Crédito",
             subtitle: "Gerencie seus catões e compras",
             buttonText: "Novo Cartão",
-            color: Color.fromARGB(255, 14, 160, 68),
+            color: Color(0xFF16A28C),
             onPressed: () {
               // abrir modal ou navegar
             },

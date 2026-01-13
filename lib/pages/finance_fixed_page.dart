@@ -17,7 +17,7 @@ class FinanceFixedPage extends StatelessWidget {
             title: "Despesas Fixas",
             subtitle: "Gerencie suas despesas",
             buttonText: "Nova despesa",
-            color: Color.fromARGB(255, 14, 160, 68),
+            color: Color(0xFF16A28C),
             onPressed: () {
               // abrir modal ou navegar
             },
