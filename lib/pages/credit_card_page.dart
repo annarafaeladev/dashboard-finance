@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/card_resume_credit_card.dart';
 import 'package:flutter_application_1/widgets/content_page_header.dart';
 
 class CreditCardPage extends StatelessWidget {
@@ -20,10 +21,14 @@ class CreditCardPage extends StatelessWidget {
               // abrir modal ou navegar
             },
           ),
-         
+
           const SizedBox(height: 20),
-        
-         
+
+          CardResumeCreditCard(
+            limiteTotal: 5000,
+            utilizado: 1750,
+            disponivel: 3250,
+          ),
         ],
       ),
     );
