@@ -54,7 +54,7 @@ class FinanceMenuModal extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Método 50/30/201",
+                      "Método 50/30/20",
                       style: TextStyle(color: Colors.black54),
                     ),
                   ],

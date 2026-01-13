@@ -22,10 +22,10 @@ class AppNavigationBar extends StatelessWidget {
     final hiddenItems = items.where((i) => !i.isDisplayBottomBar).toList();
 
     return NavigationBar(
-      //   selectedIndex: items[currentIndex].isDisplayBottomBar
-      // ? visibleItems.indexOf(items[currentIndex])
-      // : -1,
-      selectedIndex: currentIndex,
+        selectedIndex: items[currentIndex].isDisplayBottomBar
+      ? visibleItems.indexOf(items[currentIndex])
+      : visibleItems.length,
+
       onDestinationSelected: (index) async {
         // Clicou no botão "Mais"
         if (index == visibleItems.length) {
@@ -42,7 +42,6 @@ class AppNavigationBar extends StatelessWidget {
           }
           return;
         }
-
         // Clique normal
         final selectedItem = visibleItems[index];
         final realIndex = items.indexOf(selectedItem);

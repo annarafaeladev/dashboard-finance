@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/finance_fixed_page.dart';
 import 'package:flutter_application_1/pages/finance_out_page.dart';
+import 'package:flutter_application_1/pages/finance_reserve_page.dart';
 import '../models/nav_item.dart';
 import '../models/page_item.dart';
 import '../pages/home_page.dart';
@@ -72,12 +73,12 @@ const appNavItems = [
   NavItem(
     pageItem: PageItem(
       appBarTitle: "Reserva",
-      page: CreditCardPage(),
+      page: FinanceReservePage(),
       bottomBarTitle: "Reserva",
     ),
-
-    icon: Icons.credit_card_outlined,
-    selectedIcon: Icons.credit_card,
+    isDisplayBottomBar: false,
+    icon: Icons.security,
+    selectedIcon: Icons.security,
   ),
   NavItem(
     pageItem: PageItem(
