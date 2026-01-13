@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/card_list_dynamic.dart';
 import 'package:flutter_application_1/widgets/content_page_header.dart';
 import 'package:flutter_application_1/widgets/finance_card.dart';
 
@@ -34,6 +35,8 @@ class FinanceOutPage extends StatelessWidget {
           ),
 
           const SizedBox(height: 16),
+
+          CardListDynamic(titulo: "Histórico de Saídas", emptyMessage: "Nenhuma saída registrada", items: []),
         ],
       ),
     );

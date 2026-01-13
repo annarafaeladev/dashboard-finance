@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/card_list_dynamic.dart';
 import 'package:flutter_application_1/widgets/content_page_header.dart';
 import 'package:flutter_application_1/widgets/finance_card.dart';
 
@@ -21,9 +22,9 @@ class FinanceInPage extends StatelessWidget {
               // abrir modal ou navegar
             },
           ),
-         
+
           const SizedBox(height: 20),
-        
+
           // 🟢 Renda Mensal
           const FinanceCard(
             title: "Total de Entradas",
@@ -34,6 +35,7 @@ class FinanceInPage extends StatelessWidget {
           ),
 
           const SizedBox(height: 16),
+          CardListDynamic(titulo: "Histórico de Entradas", emptyMessage: "Nenhuma entrada registrada", items: []),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/card_list_dynamic.dart';
 import 'package:flutter_application_1/widgets/card_resume_credit_card.dart';
 import 'package:flutter_application_1/widgets/content_page_header.dart';
 
@@ -28,6 +29,12 @@ class CreditCardPage extends StatelessWidget {
             limiteTotal: 5000,
             utilizado: 1750,
             disponivel: 3250,
+          ),
+          const SizedBox(height: 16),
+          CardListDynamic(
+            titulo: "Cartão de Crédito",
+            emptyMessage: "Nenhuma compra no crédito",
+            items: [],
           ),
         ],
       ),
