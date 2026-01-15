@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/show_user_menu.dart';
 
 class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -20,8 +21,8 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         IconButton(
-          icon: const Icon(Icons.notifications_active),
-          onPressed: () {},
+          icon: const Icon(Icons.person),
+          onPressed: () => showUserMenu(context),
         ),
       ],
     );

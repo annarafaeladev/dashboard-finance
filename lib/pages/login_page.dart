@@ -15,6 +15,9 @@ class _LoginPageState extends State<LoginPage> {
   Future<void> _login() async {
     try {
       await controller.login();
+       ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Login realizado com sucesso")),
+      );
       Navigator.pushReplacementNamed(context, "/home");
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
